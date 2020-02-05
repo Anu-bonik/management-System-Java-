@@ -1,0 +1,5 @@
+nuik,1593,client
+Ahnaf,12345,client
+NUIK,12345,admin
+partho,12345,admin
+1234,1234,admin

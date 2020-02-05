@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.ClientUIController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Export User Info(Txt)" />
+                  <MenuItem mnemonicParsing="false" text="Export User Info(Pdf)" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Edit User Information" />
+                  <MenuItem mnemonicParsing="false" text="Change Account Password" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Contact">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Chat With Manager" />
+                  <MenuItem mnemonicParsing="false" text="Message CEO" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="FeedBack">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Suggestions" />
+                  <MenuItem mnemonicParsing="false" text="Complains" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Events">
+               <items>
+                  <Menu mnemonicParsing="false" text="Current Events">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Hosting">
+                           <graphic>
+                              <ComboBox fx:id="hostingEvent3" prefWidth="150.0" />
+                           </graphic></MenuItem>
+                    </items>
+                  </Menu>
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="298.0" layoutY="19.0" prefHeight="17.0" prefWidth="104.0" text="Client UI">
+               <font>
+                  <Font name="Bell MT Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="home" layoutX="45.0" layoutY="49.0" mnemonicParsing="false" onAction="#onHomeAction" text="HOME" />
+            <Button fx:id="logout" layoutX="602.0" layoutY="49.0" mnemonicParsing="false" onAction="#onLogoutAction" text="logout" />
+            <Label layoutX="479.0" layoutY="168.0" text="USER INFO">
+               <font>
+                  <Font name="Bell MT Bold" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="91.0" fitWidth="104.0" layoutX="602.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/circled-user-male-skin-type-1-2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="378.0" layoutY="240.0" text="Name:">
+               <font>
+                  <Font name="Bauhaus 93" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="387.0" layoutY="288.0" prefHeight="15.0" prefWidth="31.0" text="Age:">
+               <font>
+                  <Font name="Bauhaus 93" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="371.0" layoutY="330.0" prefHeight="15.0" prefWidth="62.0" text="Address:">
+               <font>
+                  <Font name="Bauhaus 93" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameOutput" layoutX="440.0" layoutY="239.0" prefHeight="17.0" prefWidth="123.0">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="ageoutput" layoutX="430.0" layoutY="287.0" prefHeight="17.0" prefWidth="98.0">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="addressOutput" layoutX="433.0" layoutY="329.0" prefHeight="17.0" prefWidth="81.0">
+               <font>
+                  <Font name="Bell MT Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="378.0" layoutY="371.0" prefHeight="15.0" prefWidth="62.0" text="Gender:">
+               <font>
+                  <Font name="Bauhaus 93" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="genderOutput" layoutX="452.0" layoutY="370.0" prefHeight="17.0" prefWidth="71.0" />
+            <Label layoutX="383.0" layoutY="413.0" prefHeight="15.0" prefWidth="62.0" text="email:">
+               <font>
+                  <Font name="Bauhaus 93" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailOutput" layoutX="444.0" layoutY="412.0" prefHeight="17.0" prefWidth="131.0" />
+            <MenuButton layoutX="118.0" layoutY="203.0" mnemonicParsing="false" text="Hosting Event">
+              <items>
+                  <Menu mnemonicParsing="false" text="Cancel Request">
+                    <items>
+                      <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <ComboBox fx:id="hostingEvent" prefWidth="150.0" />
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Change Details">
+                     <items>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <ComboBox fx:id="hostingEvent2" prefWidth="150.0" />
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                  </Menu>
+              </items>
+            </MenuButton>
+            <MenuButton layoutX="88.0" layoutY="134.0" mnemonicParsing="false" text="Event">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#HostMarriageAnniversary" text="Marrige Anniversary" />
+                <MenuItem mnemonicParsing="false" onAction="#HostMarriageCeremony" text="Marriage ceremony" />
+                  <MenuItem mnemonicParsing="false" onAction="#HostAConcert" text="Concert" />
+              </items>
+            </MenuButton>
+            <MenuButton layoutX="35.0" layoutY="345.0" mnemonicParsing="false" text="Moderate ticket">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Cancel Tciket" />
+                <MenuItem mnemonicParsing="false" text="Change Details " />
+              </items>
+            </MenuButton>
+            <SplitMenuButton layoutX="35.0" layoutY="403.0" mnemonicParsing="false" text="Reports">
+              <items>
+                  <MenuItem mnemonicParsing="false" text="Total Ateended Audiances" />
+                  <Menu fx:id="ttt" mnemonicParsing="false" text="Total Hosted Events">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="From">
+                           <graphic>
+                              <DatePicker fx:id="fromDate" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="To">
+                           <graphic>
+                              <DatePicker fx:id="todate" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <Button mnemonicParsing="false" onAction="#onClickGetReport" text="Get Report" />
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                  </Menu>
+              </items>
+            </SplitMenuButton>
+            <Button layoutX="36.0" layoutY="277.0" mnemonicParsing="false" text="Buy a Event Ticket" />
+            <Label layoutX="45.0" layoutY="136.0" text="Host :" />
+            <Label layoutX="45.0" layoutY="205.0" text="Moderate:" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

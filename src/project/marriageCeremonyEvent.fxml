@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.MarriageCeremonyEventController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="251.0" layoutY="23.0" text="Marriage Ceremony">
+               <font>
+                  <Font name="Bell MT" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="45.0" layoutY="74.0" text="Please Fill Up The Form" />
+            <Label layoutX="393.0" layoutY="385.0" text="Marriage Date: " />
+            <Label layoutX="71.0" layoutY="190.0" text="Location:" />
+            <TextField fx:id="Location" layoutX="169.0" layoutY="186.0" />
+            <Label layoutX="73.0" layoutY="250.0" text="Religion:" />
+            <ComboBox fx:id="religion" layoutX="169.0" layoutY="246.0" prefWidth="150.0" />
+            <Label layoutX="53.0" layoutY="313.0" text="No of Guest:" />
+            <TextField fx:id="guest" layoutX="169.0" layoutY="309.0" />
+            <Label layoutX="20.0" layoutY="384.0" text="Special Section(VIP):" />
+            <DatePicker fx:id="MarriageDate" layoutX="501.0" layoutY="383.0" />
+            <Label layoutX="72.0" layoutY="447.0" text="BUDGET:" />
+            <TextField fx:id="budget" layoutX="170.0" layoutY="443.0" />
+            <Label layoutX="397.0" layoutY="131.0" text="Bridegroom (Name):" />
+            <TextField fx:id="groomName" layoutX="524.0" layoutY="127.0" />
+            <Label layoutX="436.0" layoutY="190.0" text="Bride(Name):" />
+            <TextField fx:id="brideName" layoutX="524.0" layoutY="186.0" />
+            <Label layoutX="401.0" layoutY="250.0" text="Types served food:" />
+            <MenuButton layoutX="524.0" layoutY="246.0" mnemonicParsing="false" text="MenuButton">
+              <items>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <CheckBox fx:id="bengali" mnemonicParsing="false" text="Bengali" />
+                     </graphic>
+                  </MenuItem>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <CheckBox fx:id="chinese" mnemonicParsing="false" text="Chinese" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <CheckBox fx:id="italian" mnemonicParsing="false" text="Italian" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <CheckBox fx:id="continental" mnemonicParsing="false" text="continental" />
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <CheckBox fx:id="mexican" mnemonicParsing="false" text="Mexican" />
+                     </graphic>
+                  </MenuItem>
+              </items>
+            </MenuButton>
+            <Button layoutX="319.0" layoutY="516.0" mnemonicParsing="false" onAction="#onClickSubmit" text="SUBMIT" />
+            <SplitMenuButton fx:id="Home" layoutX="588.0" layoutY="39.0" mnemonicParsing="false" onAction="#onClickHome" text="Home">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#onClickLogOut" text="LOGOUT" />
+              </items>
+            </SplitMenuButton>
+            <Label layoutX="393.0" layoutY="313.0" text="Musical Peformances:" />
+            <RadioButton fx:id="VipYes" layoutX="170.0" layoutY="384.0" mnemonicParsing="false" text="YES" />
+            <RadioButton fx:id="ViipNo" layoutX="251.0" layoutY="384.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="46.0" text="NO" />
+            <RadioButton fx:id="musicYes" layoutX="531.0" layoutY="313.0" mnemonicParsing="false" text="Yes" />
+            <RadioButton fx:id="MusicNO" layoutX="607.0" layoutY="312.0" mnemonicParsing="false" text="No" />
+            <Label layoutX="53.0" layoutY="131.0" text="Event Name:" />
+            <TextField fx:id="eventName" layoutX="168.0" layoutY="126.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
